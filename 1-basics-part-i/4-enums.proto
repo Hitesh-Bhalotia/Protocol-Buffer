@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+message Person{
+    int32 age = 1;
+    string first_name = 2;
+    string last_name = 3;
+    bytes small_picture = 4;
+    bool is_profile_verified = 5;
+    float height = 6;
+
+    repeated string phone = 7;
+
+    enum EyeColour {
+        // RULE -> Default value for Enums are the first value
+        UNKNOWN_EYE_COLOUR = 0; // enum tags start from 0
+        EYE_GREEN = 1;
+        EYE_BLUE = 2;
+        EYE_BROWN = 3;
+        EYE_BLACK = 4;
+    }
+
+    // it's an enum as defined above
+    EyeColour eye_colour = 8;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+/*
+Person is used to identify 
+users across our system
+*/
+message Person{
+    int32 age = 1; // The number represents the parameter number
+    string first_name = 2;
+    string last_name = 3;
+    bytes small_picture = 4; // represents a .jpg file
+    bool is_profile_verified = 5;
+    float height = 6; // in cm
+    
+    //list of numbers that is optional to provide at signup
+    repeated string phone = 7; // can we have more than 1 number associated with a Person using "repeated"
+}

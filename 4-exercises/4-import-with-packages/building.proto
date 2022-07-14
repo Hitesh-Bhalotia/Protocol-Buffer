@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "hitesh/Protocol Buffer/4-exercises/4-import-with-packages/street.proto";
+
+package building;
+message Building {
+    string building_name = 1;
+    int32 building_number = 2;
+    street.Street street = 3;
+}
